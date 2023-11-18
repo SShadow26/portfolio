@@ -1,0 +1,254 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+@font-face {
+    font-family: 'Pacifico';
+    src: url('../resources/fonts/Pacifico.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'adrip1';
+    src: url('../resources/fonts/adrip1.ttf') format('truetype');
+}
+
+body {
+    margin-top: 6rem;
+    text-align: center;
+    font-family: 'adrip1';
+    src: url('../resources/fonts/adrip1.ttf');
+    background: linear-gradient(90deg, #000000 1%, #8e2ed2 50%, #000000 99%);
+}
+
+h1 {
+    color: #52d64e;
+    font-size: 10rem;
+    text-shadow: 0.5rem 0 #000000;
+}
+
+form {
+    margin-top: -1rem;
+}
+
+select {
+    font-family: 'Pacifico';
+    src: url('../resources/fonts/Pacifico.ttf');
+    background: #560094;
+    color: #6bb43a;
+    text-align: center;
+    border: #6c01b9 solid 0.3rem;
+    border-radius: 5rem;
+    font-size: 3rem;
+}
+
+#imagenEdad {
+    width: 60rem;
+    height: 40rem;
+}
+
+.espaciado {
+    margin: 9rem;
+}
+
+#btn {
+    position: relative;
+    display: inline-block;
+    padding: 1.3rem 2rem;
+    color: #000000;
+    font-size: 1.6rem;
+    text-decoration: none;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 1.5rem;
+    margin-left: 0;
+    letter-spacing: 0.2rem;
+    border: none;
+    background-color: #007D99;
+}
+
+#btn:hover {
+    background: #00AACC;
+    color: #000000;
+    border-radius: 0.5rem;
+}
+
+#btn span {
+    position: absolute;
+    display: block;
+}
+
+#btn span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 0.2rem;
+    background: linear-gradient(90deg, transparent, #000000);
+    animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+
+#btn span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 0.2rem;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #000000);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+    0% {
+        top: -100%;
+    }
+
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+
+#btn span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 0.2rem;
+    background: linear-gradient(270deg, transparent, #000000);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+    0% {
+        right: -100%;
+    }
+
+    50%,
+    100% {
+        right: 100%;
+    }
+}
+
+#btn span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 0.2rem;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #000000);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+    0% {
+        bottom: -100%;
+    }
+
+    50%,
+    100% {
+        bottom: 100%;
+    }
+}
+
+@media (max-width: 200px) {
+    body {
+        margin-top: 0.3rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    select {
+        font-size: 1rem;
+    }
+
+    #imagenEdad {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .espaciado {
+        margin: 3rem;
+    }
+}
+
+@media (min-width: 201px) and (max-width: 767px) {
+    body {
+        margin-top: 1rem;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    select {
+        font-size: 2rem;
+    }
+
+    #imagenEdad {
+        width: 30rem;
+        height: 20rem;
+    }
+
+    .espaciado {
+        margin: 4rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        margin-top: 4rem;
+    }
+
+    h1 {
+        font-size: 8rem;
+    }
+
+    select {
+        font-size: 2rem;
+    }
+
+    #imagenEdad {
+        width: 50rem;
+        height: 40rem;
+    }
+
+    .espaciado {
+        margin: 5rem;
+    }
+}
+
+@media (min-width: 1025px) {
+    body {
+        margin-top: 6rem;
+    }
+
+    h1 {
+        font-size: 8rem;
+    }
+
+    select {
+        font-size: 3rem;
+    }
+
+    #imagenEdad {
+        width: 60rem;
+        height: 40rem;
+    }
+
+    .espaciado {
+        margin: 3rem;
+    }
+}

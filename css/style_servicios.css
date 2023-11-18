@@ -1,0 +1,189 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /* 1 rem = 10 pixeles*/
+}
+
+@font-face {
+    font-family: 'Largest Genome Font';
+    src: url('../resources/fonts/Largest_Genome_Font.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Phudu Font';
+    src: url('../resources/fonts/Phudu_Font.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url('../resources/fonts/Merriweather_Font.ttf') format('truetype');
+}
+
+.contenido {
+    position: absolute;
+    margin: 12rem 6rem;
+    z-index: 1;
+    text-align: center;
+    padding-top: 1rem;
+    color: #ffffff;
+}
+
+h2 {
+    font-family: 'Phudu Font';
+    src: url('../resources/fonts/Phudu_Font.ttf');
+    font-size: 4rem;
+    color: #ffffff;
+}
+
+p {
+    font-family: 'Merriweather';
+    src: url('../resources/fonts/Merriweather_Font.ttf');
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+.video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    z-index: 3;
+}
+
+.nav-menu ul {
+    height: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu li {
+    margin: 0;
+}
+
+.nav-menu a {
+    display: block;
+    padding: 2rem 3rem;
+    text-decoration: none;
+    color: #008dab;
+    font-family: 'Phudu Font';
+    position: relative;
+    text-align: center;
+}
+
+.nav-menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: #005163;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+    transform: scaleX(1);
+}
+
+@media (max-width: 200px) {
+
+    .contenido {
+        margin: 3rem 2rem;
+    }
+
+    .contenido h2 {
+        margin: -1rem;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    .nav-menu a {
+        font-size: 0.6rem;
+        z-index: 3;
+        margin-left: -2.7rem;
+        margin-right: -2.7rem;
+    }
+
+    .nav-menu a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 2px;
+        background-color: #005163;
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform 0.3s ease;
+    }
+
+    .nav-menu a:hover::after {
+        transform: scaleX(0.3);
+    }
+}
+
+@media (min-width: 201px) and (max-width: 767px) {
+
+    .contenido {
+        margin: 3rem 2rem;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .nav-menu a {
+        font-size: 1.3rem;
+        z-index: 3;
+        margin-left: -2rem;
+        margin-right: -2rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    h2 {
+        text-align: center;
+        font-size: 2.35rem;
+    }
+
+    .nav-menu a {
+        font-size: 1.8rem;
+        z-index: 3;
+    }
+
+}
+
+@media (min-width: 1025px) {
+
+    .contenido h2 {
+        font-size: 2rem;
+        margin: -1rem;
+    }
+
+    .nav-menu a {
+        font-size: 1.9rem;
+        z-index: 3;
+    }
+}

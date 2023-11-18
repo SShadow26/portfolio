@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords"
+        content="diseño web, desarrollo responsivo, optimización SEO, Montevideo, diseño personalizado">
+    <meta name="description" content="Tarea realizada para salvar el año. XD">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Tarea final" />
+    <meta property="og:description"
+        content="Ofrecemos diseño web personalizado, desarrollo responsivo y optimización SEO para empresas en Montevideo. Contáctanos para mejorar tu presencia en línea." />
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Adrian Parrilla">
+    <link rel="shortcut icon" href="../resources/img/logo_sshadow.png" type="image/x-icon">
+    <link rel="canonical" href="https://portfolio-nine-iota-95.vercel.app/">
+    <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../css/style_viajes.css">
+    <title>Formulario de viajes</title>
+</head>
+
+<body>
+
+    <h2>Formulario</h2>
+
+    <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required><br><br>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required><br><br>
+
+        <label for="nombre">Mail:</label>
+        <input type="text" id="mail" name="mail" required><br><br>
+
+        <label for="apellido">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" required><br><br>
+
+        <label for="pass">Contraseña:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="pass">Confirmacion:</label>
+        <input type="password" id="confirm" name="password" required><br><br>
+
+        <input type="submit" value="Enviar">
+
+        <fieldset>
+            <legend>Destino</legend>
+            <label for="ciudad">Selecciona un lugar:</label>
+            <select id="ciudad" name="ciudad">
+                <option value="paris">París, Francia</option>
+                <option value="london">Londres, Reino Unido</option>
+                <option value="rome">Roma, Italia</option>
+                <option value="bangkok">Bangkok, Tailandia</option>
+                <option value="istanbul">Estambul, Turquía</option>
+                <option value="new-york">Nueva York, Estados Unidos</option>
+                <option value="tokyo">Tokio, Japón</option>
+                <option value="rio-de-janeiro">Río de Janeiro, Brasil</option>
+                <option value="barcelona">Barcelona, España</option>
+                <option value="amsterdam">Ámsterdam, Países Bajos</option>
+                <option value="prague">Praga, República Checa</option>
+                <option value="cairo">El Cairo, Egipto</option>
+                <option value="sydney">Sídney, Australia</option>
+                <option value="cape-town">Ciudad del Cabo, Sudáfrica</option>
+                <option value="moscow">Moscú, Rusia</option>
+                <option value="mexico-city">Ciudad de México, México</option>
+                <option value="berlin">Berlín, Alemania</option>
+                <option value="buenos-aires">Buenos Aires, Argentina</option>
+                <option value="dubai">Dubái, Emiratos Árabes Unidos</option>
+                <option value="vancouver">Vancouver, Canadá</option>
+                <option value="cairo">El Cairo, Egipto</option>
+                <option value="kyoto">Kioto, Japón</option>
+                <option value="dublin">Dublín, Irlanda</option>
+                <option value="vienna">Viena, Austria</option>
+                <option value="seoul">Seúl, Corea del Sur</option>
+                <option value="madrid">Madrid, España</option>
+                <option value="cape-town">Ciudad del Cabo, Sudáfrica</option>
+                <option value="san-francisco">San Francisco, Estados Unidos</option>
+                <option value="santorini">Santorini, Grecia</option>
+                <option value="machu-picchu">Machu Picchu, Perú</option>
+                <option value="rome">Roma, Italia</option>
+            </select> <br><br>
+
+            <label for="fechaIngreso">Fecha de ingreso:</label>
+            <input type="date" id="fechaIngreso" name="fechaIngreso">
+
+            <label for="fechaRegreso">Fecha de regreso:</label>
+            <input type="date" id="fechaRegreso" name="fechaRegreso">
+
+            <label>Tipo de viaje:</label>
+            <ul>
+                <li>
+                    <input type="radio" id="pasaje" name="opcion-viaje" value="pasaje" required>
+                    <label for="pasaje">Solo pasaje</label>
+                </li>
+                <li>
+                    <input type="radio" id="alojamiento" name="opcion-viaje" value="alojamiento" required>
+                    <label for="alojamiento">Solo alojamiento</label>
+                </li>
+                <li>
+                    <input type="radio" id="pasaje-alojamiento" name="opcion-viaje" value="pasaje-alojamiento" required>
+                    <label for="pasaje-alojamiento">Pasaje y alojamiento</label>
+                </li>
+            </ul>
+
+            <input type="submit" value="Enviar">
+        </fieldset>
+
+    </form>
+
+    <button id="btn" href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Volver
+    </button>
+    <script>
+        // Obtener el botón por su ID
+        var boton = document.getElementById("btn");
+
+        // Agregar un evento de clic al botón
+        boton.addEventListener("click", function () {
+            // Redirigir a la otra página dentro del mismo archivo
+            window.location.href = "trabajos.html";
+        });
+    </script>
+
+    <script>
+        const fechaIngreso = document.getElementById('fechaIngreso');
+        const fechaRegreso = document.getElementById('fechaRegreso');
+
+        fechaIngreso.addEventListener('change', () => {
+            fechaRegreso.min = fechaIngreso.value;
+        });
+
+        fechaRegreso.addEventListener('change', () => {
+            if (fechaRegreso.value < fechaIngreso.value) {
+                alert('La fecha de regreso no puede ser anterior a la fecha de ingreso.');
+                fechaRegreso.value = fechaIngreso.value;
+            }
+        });
+    </script>
+
+</body>
+
+</html>

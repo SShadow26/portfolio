@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords"
+		content="diseño web, desarrollo responsivo, optimización SEO, Montevideo, diseño personalizado">
+	<meta name="description" content="Tarea realizada para salvar el año. XD">
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Tarea final" />
+	<meta property="og:description"
+		content="Ofrecemos diseño web personalizado, desarrollo responsivo y optimización SEO para empresas en Montevideo. Contáctanos para mejorar tu presencia en línea." />
+	<meta name="robots" content="index, follow">
+	<meta name="author" content="Adrian Parrilla">
+	<link rel="shortcut icon" href="resources/img/logo_sshadow.png" type="image/x-icon">
+	<link rel="canonical" href="https://portfolio-nine-iota-95.vercel.app/">
+	<link href="../css/normalize.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="../css/style_trabajos.css">
+	<title>Portfolio - Adrian Parrilla</title>
+</head>
+
+<body>
+	<h2><img src="../resources/img/logo_sshadow.png" alt="Logo personal" width="100rem" height="100rem"></h2>
+
+	<div class="neon-lights">
+		<div class="neon-light neon-red"></div>
+		<div class="neon-light neon-blue"></div>
+		<div class="neon-light neon-green"></div>
+		<div class="neon-light neon-yellow"></div>
+		<div class="neon-light neon-pink"></div>
+		<div class="neon-light neon-orange"></div>
+		<div class="neon-light neon-purple"></div>
+		<div class="neon-light neon-cyan"></div>
+		<div class="neon-light neon-magenta"></div>
+		<div class="neon-light neon-teal"></div>
+	</div>
+
+	<input type="color" id="color-picker-b">
+
+	<nav>
+		<ul>
+			<li><a href="../index.html">Inicio</a></li>
+			<li></li>
+			<li><a href="trabajos.html">Trabajos</a></li>
+			<li></li>
+			<li><a href="sobremi.html">Sobre mi</a></li>
+		</ul>
+	</nav>
+
+	<input type="color" id="color-picker">
+
+	<div class="grif">
+		<div class="espaciado"></div>
+		<a href="arias_web_designers.html">Arias Web Designers</a>
+		<div class="espaciado"></div>
+		<a href="calculo_iva.html">Calculo de Iva</a>
+		<div class="espaciado"></div>
+		<a href="code_and_tech.html">Code & Tech</a>
+		<div class="espaciado"></div>
+		<a href="cv.html">Curriculum Vitae</a>
+		<div class="espaciado"></div>
+		<a href="etapas_de_vida.html">Etapas de la Vida</a>
+		<div class="espaciado"></div>
+		<a href="repaso.html">Repaso</a>
+		<div class="espaciado"></div>
+		<a href="tabla_comida_jugadores.html">Tabla Comida y Jugadores</a>
+		<div class="espaciado"></div>
+		<a href="tabla_medidas.html">Tabla de Medidas</a>
+		<div class="espaciado"></div>
+		<a href="tabla_mp3.html">Tabla MP3</a>
+		<div class="espaciado"></div>
+		<a href="tabla_numeros.html">Tabla de Numeros</a>
+		<div class="espaciado"></div>
+		<a href="takemplo.html">Takemplo</a>
+		<div class="espaciado"></div>
+		<a href="viajes.html">Viajes</a>
+		<div class="espaciado"></div>
+		<a href="evento_final.html">Trabajo Final</a>
+		<div class="espaciado"></div>
+	</div>
+
+	<script>
+		const colorPicker = document.getElementById('color-picker');
+		const neonLights = document.querySelectorAll('.neon-light');
+
+		colorPicker.addEventListener('input', (event) => {
+			const color = event.target.value;
+
+			neonLights.forEach((neonLight) => {
+				neonLight.style.backgroundColor = color;
+			});
+		});
+
+		document.getElementById("color-picker-b").addEventListener("change", function (event) {
+			var color = event.target.value;
+			document.body.style.backgroundColor = color;
+		});
+	</script>
+</body>
+
+</html>

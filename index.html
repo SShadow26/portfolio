@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords"
+		content="diseño web, desarrollo responsivo, optimización SEO, Montevideo, diseño personalizado">
+	<meta name="description" content="Tarea realizada para salvar el año. XD">
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Tarea final" />
+	<meta property="og:description"
+		content="Ofrecemos diseño web personalizado, desarrollo responsivo y optimización SEO para empresas en Montevideo. Contáctanos para mejorar tu presencia en línea." />
+	<meta name="robots" content="index, follow">
+	<meta name="author" content="Adrian Parrilla">
+	<link rel="shortcut icon" href="resources/img/logo_sshadow.png" type="image/x-icon">
+	<link rel="canonical" href="https://portfolio-nine-iota-95.vercel.app/">
+	<link href="css/normalize.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Portfolio - Adrian Parrilla</title>
+</head>
+
+<body>
+	<h1><img src="resources/img/logo_sshadow.png" alt="Logo personal" width="100rem" height="100rem"></h1>
+
+	<div class="neon-lights">
+		<div class="neon-light neon-red"></div>
+		<div class="neon-light neon-blue"></div>
+		<div class="neon-light neon-green"></div>
+		<div class="neon-light neon-yellow"></div>
+		<div class="neon-light neon-pink"></div>
+		<div class="neon-light neon-orange"></div>
+		<div class="neon-light neon-purple"></div>
+		<div class="neon-light neon-cyan"></div>
+		<div class="neon-light neon-magenta"></div>
+		<div class="neon-light neon-teal"></div>
+	</div>
+
+	<input type="color" id="color-picker-b">
+
+	<nav>
+		<ul>
+			<li><a href="index.html">Inicio</a></li>
+			<li></li>
+			<li><a href="html/trabajos.html">Trabajos</a></li>
+			<li></li>
+			<li><a href="html/sobremi.html">Sobre mi</a></li>
+		</ul>
+	</nav>
+
+	<input type="color" id="color-picker">
+
+	<div class="nota">
+		<h3>Nota</h3>
+		<p>Este sitio contiene una implementacion de eleccion de color de
+			parte del usuario en cada uno de sus enlaces.</p><br>
+		<p>Estos se encuentran arriba y abajo de la barra de navegacion</p><br>
+		<p>El de arriba corresponde al color principal</p>
+		<p>El de abajo corresponde al color del fondo</p>
+	</div>
+
+	<div id="reproducir" onclick="iniciarReproduccion()">Haz clic para reproducir</div>
+
+	<audio id="miAudio" controls>
+		<source src="resources/songs/LIT killah, Tiago PZK, Big One - Luxxx.mp3" type="audio/mp3">
+		Tu navegador no soporta la etiqueta de audio.
+	</audio>
+
+	<script>
+		function iniciarReproduccion() {
+			var audio = document.getElementById('miAudio');
+			audio.play();
+			document.getElementById('reproducir').style.display = 'none'; // Opcional: ocultar el elemento que inició la reproducción
+		}
+	</script>
+
+	<script>
+		const colorPicker = document.getElementById('color-picker');
+		const neonLights = document.querySelectorAll('.neon-light');
+
+		colorPicker.addEventListener('input', (event) => {
+			const color = event.target.value;
+
+			neonLights.forEach((neonLight) => {
+				neonLight.style.backgroundColor = color;
+			});
+		});
+
+		document.getElementById("color-picker-b").addEventListener("change", function (event) {
+			var color = event.target.value;
+			document.body.style.backgroundColor = color;
+		});
+	</script>
+
+</body>
+
+</html>

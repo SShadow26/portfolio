@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords"
+		content="diseño web, desarrollo responsivo, optimización SEO, Montevideo, diseño personalizado">
+	<meta name="description" content="Tarea realizada para salvar el año. XD">
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Tarea final" />
+	<meta property="og:description"
+		content="Ofrecemos diseño web personalizado, desarrollo responsivo y optimización SEO para empresas en Montevideo. Contáctanos para mejorar tu presencia en línea." />
+	<meta name="robots" content="index, follow">
+	<meta name="author" content="Adrian Parrilla">
+	<link rel="shortcut icon" href="resources/img/logo_sshadow.png" type="image/x-icon">
+	<link rel="canonical" href="https://portfolio-nine-iota-95.vercel.app/">
+	<link href="../css/normalize.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="../css/style_aboutme.css">
+	<title>Portfolio - Adrian Parrilla</title>
+</head>
+
+<body>
+	<h2><img src="../resources/img/logo_sshadow.png" alt="Logo personal" width="100rem" height="100rem"></h2>
+
+	<div class="neon-lights">
+		<div class="neon-light neon-red"></div>
+		<div class="neon-light neon-blue"></div>
+		<div class="neon-light neon-green"></div>
+		<div class="neon-light neon-yellow"></div>
+		<div class="neon-light neon-pink"></div>
+		<div class="neon-light neon-orange"></div>
+		<div class="neon-light neon-purple"></div>
+		<div class="neon-light neon-cyan"></div>
+		<div class="neon-light neon-magenta"></div>
+		<div class="neon-light neon-teal"></div>
+	</div>
+
+	<input type="color" id="color-picker-b">
+
+	<nav>
+		<ul>
+			<li><a href="../index.html">Inicio</a></li>
+			<li></li>
+			<li><a href="trabajos.html">Trabajos</a></li>
+			<li></li>
+			<li><a href="sobremi.html">Sobre mi</a></li>
+		</ul>
+	</nav>
+
+	<input type="color" id="color-picker">
+
+	<div class="nota">
+		<h2>Sobre mi</h2>
+		<p>Mi nombre es Adrian Parrilla</p>
+		<p>Tengo 31 años</p>
+		<p>Soy estudiante en la UTU ITS Arias Balparda</p>
+		<p>Me encuentro cursando el bachillerato tecnologico, especificamente el area de diseño web</p>
+		<p>Actualmente trabajo en un reparto de comida</p>
+		<p>Vivo con mi pareja y mi gata</p><br><br><br>
+
+	</div>
+
+	<script>
+		const colorPicker = document.getElementById('color-picker');
+		const neonLights = document.querySelectorAll('.neon-light');
+
+		colorPicker.addEventListener('input', (event) => {
+			const color = event.target.value;
+
+			neonLights.forEach((neonLight) => {
+				neonLight.style.backgroundColor = color;
+			});
+		});
+
+		document.getElementById("color-picker-b").addEventListener("change", function (event) {
+			var color = event.target.value;
+			document.body.style.backgroundColor = color;
+		});
+	</script>
+</body>
+<footer>
+	<p>Telefono: 093394263</p>
+</footer>
+
+</html>
